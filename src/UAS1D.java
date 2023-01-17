@@ -29,14 +29,12 @@ public class UAS1D {
     private String MessageID;
     private String MessageName;
     private ArrayList<String> Context;
-    public ArrayList FindWords(ArrayList<String> conteks, String cari) {
+    public String FindWords(ArrayList<String> conteks, String cari) {
         conteks.add(cari);
-        for(String ok: Context){
-            if(ok.contains(cari)){
-                System.out.println("Indeks ke "+ Context.indexOf(cari));
-            }
+        for(int i=0;i<conteks.size();i++){
+            conteks.get(i).indexOf(cari);
         }
-        return conteks;
+        return "Indeks ke"+conteks.indexOf(cari);
     }
 
     public UAS1D(){}
