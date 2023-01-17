@@ -29,15 +29,15 @@ public class UAS1D {
     private String MessageID;
     private String MessageName;
     private ArrayList<String> Context;
-    public Objects FindWords(ArrayList<String> conteks, String cari) {
-        for(String ok: conteks){
+    public ArrayList FindWords(ArrayList<String> conteks, String cari) {
+        conteks.add(cari);
+        for(String ok: Context){
             if(ok.contains(cari)){
-                System.out.println("Indeks ke "+ cari);
+                System.out.println("Indeks ke "+ Context.indexOf(cari));
             }
         }
-        return conteks.indexOf(cari);
+        return conteks;
     }
-
 
     public UAS1D(){}
    public UAS1D(String id,String name, ArrayList<String> conteks){
